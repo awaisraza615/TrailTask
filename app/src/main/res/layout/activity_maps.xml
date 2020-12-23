@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/map_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.MapsActivity">
+
+
+    <fragment
+        android:id="@+id/mapFrgmnt"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+<!--
+
+    <RelativeLayout
+        android:id="@+id/layoutbtntrack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="top"
+        app:layout_constraintEnd_toEndOf="parent">
+
+
+
+    </RelativeLayout>
+
+-->
+
+    <FrameLayout
+        android:id="@+id/pin_view_line"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/line_top_margin"
+        android:background="@drawable/line_background" />
+
+    <FrameLayout
+        android:id="@+id/pin_view_circle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/circle_background_moving">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="@dimen/inner_circle_radius"
+            android:layout_height="@dimen/inner_circle_radius"
+            android:layout_gravity="top|center_horizontal"
+            android:layout_margin="@dimen/inner_circle_margin"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_size" />
+
+        <ProgressBar
+            android:id="@+id/profile_loader"
+            android:layout_width="@dimen/inner_circle_radius"
+            android:layout_height="@dimen/inner_circle_radius"
+            android:layout_gravity="top|center_horizontal"
+            android:layout_margin="@dimen/inner_circle_margin"
+            android:contentDescription="@null"
+            android:indeterminate="true"
+            android:visibility="gone" />
+
+    </FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_200sdp"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="top"
+        android:background="@drawable/gradiantcolr">
+
+        <TextView
+            android:id="@+id/yourlocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_50sdp"
+            android:text="Location"
+            android:textColor="#000"
+            android:textSize="@dimen/_15sdp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:layout_alignParentRight="true"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginLeft="@dimen/_9sdp"
+            android:layout_marginRight="@dimen/_9sdp"
+            android:layout_marginTop="10.5dp"
+            android:background="@drawable/bg_layout">
+
+            <ImageView
+                android:layout_alignParentRight="true"
+                android:id="@+id/menuback"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:layout_margin="10dp"
+                android:padding="@dimen/_1sdp"
+                android:src="@drawable/gps" />
+            <ImageView
+                android:id="@+id/menuback2"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:layout_margin="10dp"
+                android:padding="@dimen/_1sdp"
+                android:src="@drawable/previous" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/layout10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+
+
+
+            <TextView
+                android:id="@+id/edittxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/drawableleftpickupdot"
+                android:layout_marginLeft="@dimen/_14sdp"
+                android:minLines="1"
+                android:textAlignment="textStart"
+                android:gravity="center_vertical"
+                android:layout_marginRight="@dimen/_14sdp"
+                android:layout_marginBottom="@dimen/_70sdp"
+                android:background="@drawable/edit"
+                android:drawablePadding="@dimen/_10sdp"
+                android:elevation="@dimen/_15sdp"
+                android:hint="Enter your destination"
+                android:lines="1"
+                android:maxLines="1"
+                android:padding="10dp"
+                android:textColor="#000"
+                android:textColorHint="#000"
+                tools:ignore="NotSibling,RtlCompat" />
+        </RelativeLayout>
+
+
+
+        <Button
+            android:id="@+id/btn_setpickup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/cornerrad"
+            android:text="Confirm Set"
+            android:layout_marginBottom="@dimen/_15sdp"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/_13sdp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+</FrameLayout>

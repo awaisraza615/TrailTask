@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "321726554821",
+    "project_id": "trailtaskpush-2e376",
+    "storage_bucket": "trailtaskpush-2e376.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:321726554821:android:adf085e24f4bcd415606ac",
+        "android_client_info": {
+          "package_name": "com.awaisraza.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "321726554821-v63kpbgsq4rqk2b5a4auhpn39r3n9cl5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDsmhyTo9Y6MWhyb8RRmpvUwqYUJG_3ZnY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "321726554821-v63kpbgsq4rqk2b5a4auhpn39r3n9cl5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
